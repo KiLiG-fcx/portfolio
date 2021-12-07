@@ -1,0 +1,951 @@
+body{
+    font-family: 'Sawarabi Mincho',serif;
+    background-color:whitesmoke;
+    padding:0;
+}
+
+/* fonts */
+h1{
+  font-family: 'Sofia',serif;
+  color:black;
+  margin:0;
+  font-size: 32px;
+}
+h2{
+  font-family: 'Sofia',serif;
+  color:black;
+  display: flex;
+  justify-content: center;
+}
+h3{
+  font-size:24px;
+}
+a{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* video settings */
+.video{
+	display: block;
+	width: 80%;
+	margin: auto;
+  width:400px;
+  height:280px;
+  z-index:2;
+}
+.cover_page{
+  display: block;
+  position:absolute;
+	width: 80%;
+	margin: auto;
+  width:400px;
+  height:280px;
+  z-index:1;
+}
+.video_title{
+  font-size:24px;
+}
+.volume_adjust{
+  width:60%;
+  margin: auto;
+  font-family: 'Murecho',serif;
+}
+
+.video_options{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width:50%;
+  margin:auto;
+}
+button{
+  background-color: black;
+  color:white;
+  font-size:16px;
+  font-family: 'Murecho',serif;
+  margin:8px;
+  box-shadow: whitesmoke;
+
+}
+/* end video settings */
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 11;
+  position:absolute;
+  top:-40px;
+}
+
+.skip a:focus{
+  position: absolute;
+  z-index: 13;
+  top:40px; 
+}
+
+/* end fonts */
+
+/* begin form settings */
+/* parallax image for form page in all views, in form html */
+.parallax {
+  /* The image used */
+  background-image: url("../pic/parallax.jpg");
+  /* Set a specific height */
+  min-height: 450px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+.form_fill{
+  background-color:whitesmoke;
+}
+.form_input{
+  font-size:18px;
+  color:black;
+  font-family: 'Arapey',serif;
+  padding:10px;
+  margin:15px;
+}
+form {
+  border: 3px solid #f1f1f1;
+}
+span{
+  font-family: italic;
+  font-weight: bold;
+}
+
+textarea{
+  width: 70%;
+  height: 35vh;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+legend{ 
+  font-size:32px;
+  font-family: 'Murecho',serif;
+  font-weight: bolder;
+  text-align: center;
+  margin:20px;
+}
+label{
+  display: inline-block;
+  margin-right:10px;
+  width:15%;
+  font-weight: bold;
+}
+input {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.yes{
+  position:relative;
+  margin:10px;
+  text-align: left;
+}
+/* bootstrap properties begin */
+.form-range{
+  width:50%;
+  margin-left:20px;
+  margin-right: 20px;
+}
+.form-select{
+  margin:20px;
+  width:20%;
+}
+.form-check{
+margin:20px;
+width:80%;
+}
+.form-floating{
+  width:70%;
+  margin:20px;
+}
+.form-floating label{
+  font-family: 'Murecho',serif;
+}
+.form-check-label{
+  margin-top:8px;
+  margin-left:10px;
+}
+.form-label{
+  width:100%;
+}
+input[type=radio]{
+  width:1%;
+  margin:0;
+}
+.smallword{
+  font-weight: normal;
+  font-size:15px;
+  margin:20px;
+  font-family: 'Murecho',serif;
+}
+
+#messagel{
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#messagebox{
+  margin-top: 5px;
+}
+
+/*boot strap property ends */
+
+input[type=submit] {
+  /* submit button */
+  background-color: #31103C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+input[type=submit]:hover {
+  opacity: 0.75;
+}
+#score{
+  width:50%;
+}
+
+/* end form style */
+/* end parallax image */
+
+/* navigation bar, dropdown for small screen */
+.list {
+  position:relative;
+  display:inline-block;
+  z-index:10;
+}
+.dropdown {
+  background-color: black;
+  color:white;
+  cursor:pointer;
+  font-size:20px;
+  font-family: 'Murecho',serif;
+  padding:8px;
+  width:100%;
+}
+
+.options {
+  display:none;
+  position:absolute;
+  background-color:#EEEEEE;
+  width:260px;
+}
+.options a {
+  display:block;
+  text-decoration:none;
+  color:black;
+  padding:10px;
+}
+
+.list:hover .options {
+  display:block;
+}
+.options a:hover {
+  background-color:#DDDDDD;
+  font-weight: bolder;
+  text-decoration: underline dashed 1px;
+}
+/* navigation bar (dropdown) end */
+
+p{
+  /* intro text */
+  font-family: sans-serif;
+}
+.curr{
+  /* difference for current page */
+  font-weight:bolder;
+  text-decoration: underline;
+  padding:0;
+  border:black 2px dashed;
+}
+
+@keyframes title_ani{
+  /* animation for title*/
+from {
+  font-size: 10px;
+  opacity: 0;
+}
+ to{
+   font-size: 32px;
+   opacity: 1;
+ }
+}
+
+.main_title,.game_title{
+  /* set main title animation */
+  animation-name:title_ani;
+  animation-duration: 2s;
+  animation-timing-function:ease-out;
+}
+#main_title{
+  background-color: black;
+}
+
+/* --------set main page grid--------- */
+.container{
+  display:grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows:repeat(4,200px);
+}
+.list{
+  margin:5px 0 5px 0;
+}
+
+
+/* 1. propoganda pictures (displayed for all) */
+.show_picture{
+  width:200px;
+  height:200px;
+  grid-column: 1/span 1;
+}
+#lyp{
+  grid-row: 1/span 1;
+}
+#wdp{
+  grid-row: 2/span 1;
+}
+#gyp{
+  grid-row:3/span 1;
+}
+#shp{
+  grid-row: 4/span 1;
+}
+/* end picture settings */
+
+/* 2. main page text settings */
+.main_intro{
+  margin:8px;
+  grid-column:2/span 1;
+  background-repeat:repeat-y;
+  overflow: scroll;
+  color:black;
+  text-align: justify;
+  min-width:250px;
+}
+.ly{
+  grid-row: 1/span 1;
+  background-image:url('../pic/ly/back.jpg');
+  z-index:1;
+}
+.wd{
+  grid-row:2/span 1;
+  background-image: url('../pic/wd/back.jpg');
+  z-index:2;
+}
+.gy{
+  grid-row:3/span 1;
+  background-image: url('../pic/gy/back.jpg');
+  z-index:3;
+}
+.sh{
+  grid-row:4/span 1;
+  background-image: url('../pic/sh/back.jpg');
+  z-index:4;
+}
+/* end main page text & its background settings */
+/* ----------end main page grid-------- */
+
+
+/* --------settings for internal pages----------- */
+.flip_container,.flip{
+  display:none;
+}
+/*1. titles and whole background*/
+/* 1.1 background */
+.whole_page{
+  /* backgrounds */
+  background-size: 100%;
+  background-repeat: repeat;
+}
+#lyzzr{
+    background-image: url('../pic/ly/back.jpg');
+}
+#wdsjb{
+  background-image: url('../pic/wd/back.jpg');
+}
+#gyyzl{
+  background-image: url('../pic/gy/back.jpg');
+}
+#hlr{
+  background-image: url('../pic/sh/back.jpg');
+}
+#video_page{
+  background-image: url('../pic/ly/back.jpg');
+}
+
+/* 1.2 titles */
+.game_title{
+  /* game name titles */
+  color:black;
+  font-family: 'Dancing Script',sans-serif;
+  text-align: center;
+  background-size:100%;
+  background-image: url('../pic/wd/top.jpg');
+}
+.bs,.cat{
+  /* background settings, category titles */
+  font-family: 'Great Vibes',serif;
+  font-size:24px;
+  color:black;
+  margin:20px 0 0 0;
+  text-align: center;
+}
+.off_intro,.fan_intro,.character,.video_title{
+  /*character title, picture titles */
+  font-family: 'Arapey',serif;
+  color:black;
+  text-align: center;
+  margin-top:15px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* end main titles and background */
+
+/* 2. text info under the titles */
+#bs,#cat{
+  /* 2.1. text settings for background settings and category main text*/
+    color:black;
+    font-family: 'Arapey',serif;
+    margin:0;
+    padding: 10px;
+    text-align: justify;
+}
+
+#cat{
+  /* center text for category */
+    text-align: center;
+}
+ /* end text editing*/
+
+ /* 3. character (grid) */
+ .character_info{
+  /* infomatoin grid */
+  display:grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-template-rows: 250px;
+  margin: 10px 0 10px 0;
+}
+
+.character_photo{
+  grid-column:1/span 1;
+  grid-row:1/span 1;
+  width:250px;
+  height:250px;
+  border-radius: 10px;
+}
+
+#zr_official img{
+  /* why miHoyo likes landscape view?? */
+  max-width:500px;
+}
+.character_text{
+  /* information text 1 for all views */
+  grid-column:2/span 1;
+  grid-row: 1/span 1;
+  padding:10px;
+  margin:0;
+  font-family: 'Arapey',serif;
+  color:black;
+  overflow: scroll;
+  text-align: justify;
+}
+/* end character settings */
+
+/* 4. additional picture settings */
+
+.official_pictures{
+  /* 4.1 the flexbox container for official pictures*/
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+.official_pictures img{
+  /* official picture setttings */
+  justify-content: space-between;
+  border-radius: 10px;
+  max-width: 150px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.fan_pictures img{
+  /* fan pictures setting */
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width:400px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 10px auto 10px auto;
+}
+.fan_pictures p{
+  /* fan picture text */
+  color:black;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  padding:10px;
+}
+/* end additional pictures */
+
+
+footer{
+  color:black;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  margin:10px;
+}
+.tablet_picture, .additional_text_tablet{
+  /* do not show other pictures, or additional text */
+  display:none;
+}
+
+
+/*----------------------------------------mobile view---------------------------------------------*/
+@media only screen and (min-width: 400px){
+
+/* font settings for mobile */
+  h1{
+    text-align: center;
+    padding: 20px;
+    background-image: url('../pic/main_title_back.jpg');
+    color:white;
+  }
+  h2{
+    margin: 8px;
+    font-size:18px;
+  }
+  .official_pictures{
+    flex-direction: column;
+  }
+  .official_pictures img{
+    margin: 10px auto 10px auto;
+    flex-direction: column;
+    max-width:350px;
+    align-items: center;
+  }
+  /* end font settings for mobile */
+
+}
+
+/*--------------------------------------- tablet view ------------------------------------------- */
+@media only screen and (min-width: 768px){
+  /* main page view */
+  .video{
+    width:680px;
+    height:400px;
+  }
+  .cover_page{
+    width:680px;
+    height:400px;
+  }
+  .video_title{
+    font-size:28px;
+  }
+  .button{
+    font-size:18px;
+  }
+    /* change font size */
+    h1{
+      font-size:34px;
+    }
+    h2{
+      font-size:24px;
+    }
+    .main_intro{
+      margin:10px;
+      font-size:18px;
+      overflow: hidden;
+    }
+    .whole_page p{
+      font-size:18px;
+    }
+    /* end font editing */
+
+    /* show the navigation bar as usual */
+    ul{
+      list-style:none;
+    }
+    ul a{
+      display: block;
+      text-decoration: none;
+      position:relative;
+      text-align: center;
+      background-color: white;
+      }
+    .dropdown{
+        display:none;
+    }
+    .options{
+      display:block;
+      position:relative;
+      padding:0;
+      width:100%;
+    }
+    .list {
+      width:100%;
+    }
+    .options a {
+      display:block;
+      text-decoration:none;
+      color:black;
+      padding:7px;
+      font-size: 16px;
+    }
+    .list:hover .options {
+      display:block;
+    }
+    .options a:hover {
+      background-color:#DDDDDD;
+    }
+
+
+    /*end navigation bar */
+
+    .container{
+      /* change grid into 3 columns */
+      display:grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      margin:auto;
+      grid-column-gap: 0;
+      grid-template-rows:repeat(4,300px);
+    }
+
+    /* add tablet pictures */
+    .show_picture{
+      width:300px;
+      height:300px;
+    }
+
+    .tablet_picture{
+      /* display the new photos */
+      display:block;
+      height:300px;
+      grid-column:3/span 1;
+    }
+    /* add the pictures to the 3rd column */
+    #ly_tablet_pic{
+      grid-row:1/span 1;
+    }
+    #wd_tablet_pic{
+      grid-row:2/span 1;
+    }
+    #gy_tablet_pic{
+      grid-row:3/span 1;
+    }
+    #sh_tablet_pic{
+      grid-row:4/span 1;
+    }
+    /* end editing main page */
+
+ /*----------------internal page settings--------------------*/
+    .character_info{
+      /* 1.set the new chracter grid */
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .additional_text_tablet{
+      /* add additional text */
+      margin:15px;
+      
+      display:block;
+      font-size:18px;
+      grid-column:3/span 1;
+    }
+    .setting_data_title{
+      margin:10px;
+      font-size:18px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .setting_data{
+      overflow: scroll;
+      font-family:'Arapey',serif;
+    }
+    /* end adding tablet pictures */
+    /* end picture settings */
+
+    /* main page text settings */
+
+    /* change official picture direction and size */
+    .official_pictures{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .official_pictures img{
+      max-width:350px;
+      justify-content: space-around;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:15px;
+      margin-bottom: 15px;
+    }
+    /* end official picture settings */
+    .fan_pictures p{
+      font-weight: normal;
+    }
+}
+
+/*--------------------------------------------- PC view ----------------------------------------------*/
+@media only screen and (min-width: 1280px){
+  .video{
+    width:880px;
+    height:600px;
+  }
+  .cover_page{
+    width:880px;
+    height:600px;
+  }
+  /* navigation bar from PC view */
+  ul a{
+    background-color: #EEEEEE;
+  }
+  .options{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #EEEEEE;
+  }
+  .list:hover .options {
+    display:flex;
+  }
+  .options a:hover {
+    background-color:#DDDDDD;
+  }
+
+
+  /* end navigation bar from PC view */
+
+  /* add flipcard */
+  .flip_container{
+    /* show the container for flipcard only on large screen */
+    display:flex;
+    position:relative;
+    justify-content: space-between;
+    animation:anmt;
+  }
+
+  .flipcard1,.flipcard2,.flipcard3,.flipcard4{
+    /* two picture comtainer */
+    display:flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 0;
+    position:relative;
+    transition: transform 1s;
+		-moz-transition: transform 1s;
+		-webkit-transition: transform 1s;
+		-o-transition: transform 1s;
+		transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .flip{
+    /* text style of title */
+    display:block;
+    font-family: 'Arapey',serif;
+    color:black;
+    text-align: center;
+    margin-top:15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .upper_side1, .upper_side2, .upper_side3,.upper_side4{
+    backface-visibility:hidden;
+    z-index: 900 ;
+    -webkit-transform: rotateX(0) rotateY(0);
+		transform: rotateX(0) rotateY(0);
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+  }
+
+  /* front side rotate */
+  .flipcard1:hover .upper_side1 {
+		z-index: 900;
+		-webkit-transform: rotateY(179deg);
+		transform: rotateY(179deg);
+	}
+  .flipcard1:focus .upper_side1 {
+		z-index: 900;
+		-webkit-transform: rotateY(179deg);
+		transform: rotateY(179deg);
+	}
+  .flipcard2:hover .upper_side2 {
+		z-index: 900;
+		-webkit-transform: rotateY(179deg);
+		transform: rotateY(179deg);
+	}
+  .flipcard3:hover .upper_side3 {
+		z-index: 900;
+		-webkit-transform: rotateY(179deg);
+		transform: rotateY(179deg);
+	}
+  .flipcard4:hover .upper_side4 {
+		z-index: 900;
+		-webkit-transform: rotateY(179deg);
+		transform: rotateY(179deg);
+	}
+  /* end front side rotate */
+
+  .back_side1, .back_side2, .back_side3,.back_side4{
+    position:absolute;
+    backface-visibility:hidden;
+    z-index: 800;
+		-webkit-transform: rotateY(-179deg);
+		transform: rotateY(-179deg);
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		/* -- transition is the magic sauce for animation -- */
+		-webkit-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+  }
+  /* back side rotate */
+  .flipcard1:hover .back_side1 {
+		z-index: 1000;
+		-webkit-transform: rotateX(0) rotateY(0);
+		transform: rotateX(0) rotateY(0);
+	}
+  .flipcard2:hover .back_side2 {
+		z-index: 1000;
+		-webkit-transform: rotateX(0) rotateY(0);
+		transform: rotateX(0) rotateY(0);
+	}
+  .flipcard3:hover .back_side3 {
+		z-index: 1000;
+		-webkit-transform: rotateX(0) rotateY(0);
+		transform: rotateX(0) rotateY(0);
+	}
+  .flipcard4:hover .back_side4 {
+		z-index: 1000;
+		-webkit-transform: rotateX(0) rotateY(0);
+		transform: rotateX(0) rotateY(0);
+	}
+  /* end back side rotate */
+
+  .flip_container img{
+    /* flipcard img settings */
+    width:300px;
+    height:500px;
+    border-radius: 10px;
+    margin:10px;
+    object-fit: cover;
+  }
+
+  /* larger character photo */
+  .character_info{
+    /* infomatoin grid */
+    display:grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    grid-template-rows: 300px;
+    margin: 10px 0 10px 0;
+  }
+  
+  .character_photo{
+    grid-column:1/span 1;
+    grid-row:1/span 1;
+    width:350px;
+    height:300px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 20px;
+  }
+
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  /* 1. reduce the flipcard animation */
+  .flipcard1,.flipcard2,.flipcard3,.flipcard4{
+    transition:none;
+    -moz-transition: none;
+		-webkit-transition: none;
+		-o-transition: none;
+  }
+  .flipcard1:hover .upper_side1{
+		-webkit-transform: none;
+		transform: none;
+	}
+  .flipcard2:hover .upper_side2{
+		-webkit-transform: none;
+		transform: none;
+	}
+  .flipcard3:hover .upper_side3{
+		-webkit-transform: none;
+		transform: none;
+	}
+  .flipcard4:hover .upper_side4{
+		-webkit-transform: none;
+		transform: none;
+	}
+  .upper_side1, .upper_side2, .upper_side3,.upper_side4{
+    -webkit-transform: none;
+		transform: none;
+		-webkit-transition: none;
+		transition: none;
+  }
+  
+  .back_side1, .back_side2, .back_side3,.back_side4{
+    z-index: 500;
+		-webkit-transform: none;
+		transform: none;
+		/* -- transition is the magic sauce for animation -- */
+		-webkit-transition: none;
+		transition: none;
+  }
+  .flipcard1:hover .back_side1 {
+		z-index: 100;
+		-webkit-transform: none;
+		transform: none;
+	}
+  .flipcard2:hover .back_side2 {
+		z-index: 100;
+		-webkit-transform: none;
+		transform: none;
+	}
+  .flipcard3:hover .back_side3 {
+		z-index: 100;
+		-webkit-transform: none;
+		transform: none;
+	}
+  .flipcard4:hover .back_side4 {
+		z-index: 100;
+		-webkit-transform: none;
+		transform: none;
+	}
+  /* end flipcard animation */
+  /* reduce parallax image */
+  .parallax{
+    background-attachment:scroll;
+  }
+  .main_title,.game_title{
+    /* set main title animation */
+    animation:none;
+  }
+ }
