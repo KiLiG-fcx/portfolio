@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="pic/ffq.jpg"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Dancing+Script'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Great+Vibes'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arapey'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Murecho'>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B034CQES62"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B034CQES62');
+  </script>
+  <title>Work form</title>
+</head>
+<body>
+    <header>
+        <div class="list">
+          <button class="dropdown">
+            Menu
+          </button>
+          <ul class="options">
+            <li class="mp"><a href="index.html">Main Page</a></li>
+            <li class="qc"><a href="mrlove.html">Mr. Love: Queen's choice</a></li>
+            <li class="tot"><a href="tearsofthemis.html">Tears of Themis</a></li>
+            <li class="ln"><a href="lightandnight.html">Light and Night</a></li>
+            <li class="fat"><a href="foralltime.html">For All Time</a></li>
+            <li class="curr"><a href="form.html">Form page (Current page)</a></li>
+            <li class="curr"><a href="video.html">PV</a></li>
+          </ul>
+        </div>
+      </header>
+      <main class="whole_page" id="forms">
+        <h1 class="game_title" id="game_title_form">
+          Contact form
+        </h1>
+        <div class="skip">
+          <a href="#messagebox">View form</a></li>
+        </div>
+        
+        <div class="parallax"></div>
+        <div class="form_fill">
+          <form action="https://formspree.io/f/mayvywpw" method="POST">
+            <fieldset>
+              <legend>Information collection form</legend>
+              <span class="form_input">
+                Your name
+              </span>
+              <div class="form-floating">
+                <input type="name" class="form-control" id="floatname" name="username" placeholder="Real name is not required" required="required">
+                <label for="floatname">Name</label>
+              </div>
+              <span class="form_input">
+                Your email
+              </span>
+              <div class="form-floating">
+                <input type="email" class="form-control" id="floatemail" name="Email" placeholder="abc@example.com" required="required">
+                <label for="floatemail">Email</label>
+              </div>
+              <span class="form_input">
+                Which page do you think is the best page?
+              </span>
+              <select class="form-select" aria-label="Default select example" name="best page">
+                <option selected>The best page</option>
+                <option value="queen's choice">Queen's choice</option>
+                <option value="tears of themis">Tears of Themis</option>
+                <option value="light and night">Light and Night</option>
+                <option value="for all time">For All Time</option>
+              </select>
+              <span class="form_input">
+                Which pages do you think have applealing pictures?
+              </span>
+           
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="queen's choice" id="flexCheck1"  name="appealing picture check">
+                <label class="form-check-label" for="flexCheck1">
+                  Queen's choice
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="tears of themis" id="flexCheck2" name="appealing picture check">
+                <label class="form-check-label" for="flexCheck2">
+                  Tears of Themis
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="light and night" id="flexCheck3" name="appealing picture check">
+                <label class="form-check-label" for="flexCheck3">
+                  Light and Night
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="for all time" id="flexCheck4" name="appealing picture check">
+                <label class="form-check-label" for="flexCheck4">
+                  For All Time
+                </label>
+              </div>
+      
+
+              <span class="form_input">
+                <label for="customRange1" class="form-label">How do you like the pages?</label><br>
+              </span>
+              <span class="smallword">
+                Really bad
+              </span class="form_input">
+              <input type="range" class="form-range" min="0" max="10" step="1" id="customRange1"  name="page score" required="required">
+              <span class="smallword">
+                Nice
+              </span><br>
+              <span class="form_input" id="messagel">
+                Leave a message
+              </span><br>
+              <div class="form-floating" id="messagebox">
+                <textarea class="form-control" placeholder="More comments" id="floatingTextarea2" style="height: 80px"></textarea>
+                <label for="floatingTextarea2" name="message" >Message</label>
+              </div>
+              <section class="form_input">
+                <span>Do you think the pictures are good looking?</span><br>
+                <input type="radio" id="yes" name="answer" value="1">
+                <label for="yes" class="yes">Yes</label>
+                <br>
+                <input type="radio" id="alsoyes" name="answer" value="2">
+                <label for="alsoyes" class="yes">Definitely yes</label>
+              </section>
+              <input type="submit" value="Submit!">
+            </fieldset>
+           </form>
+        </div>
+      </main>
+      <footer>
+        <div>
+          Created by Mingyu Li, 2021 <br>
+          Fan works from weibo & lofter.<br>
+          Personal lofter id: fangcunxin16.
+        </div>
+      </footer>
+ 
+</body>
+</html>

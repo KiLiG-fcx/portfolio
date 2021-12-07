@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="pic/ffq.jpg"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Dancing+Script'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Great+Vibes'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arapey'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Murecho'>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B034CQES62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B034CQES62');
+    </script>
+   <title>PV display</title>
+</head>
+<body> 
+    <header>
+        <div class="list">
+          <button class="dropdown">
+            Menu
+          </button>
+          <ul class="options">
+            <li class="mp"><a href="index.html">Main Page</a></li>
+            <li class="qc"><a href="mrlove.html">Mr. Love: Queen's choice</a></li>
+            <li class="tot"><a href="tearsofthemis.html">Tears of Themis</a></li>
+            <li class="ln"><a href="lightandnight.html">Light and Night</a></li>
+            <li class="fat"><a href="foralltime.html">For All Time</a></li>
+            <li class="form"><a href="form.html">Form page</a></li>
+            <li class="curr"><a href="video.html">PV (Current  page)</a></li>
+          </ul>
+        </div>
+      </header>
+<main class="whole_page" id="video_page">
+	<h1 class="game_title"><b>End Of The Abyss:</b> 
+        Game PV</b></h1>
+
+	<figure>
+        <figcaption class="video_title">Chapters 15-18: End of The Abyss of Mr. Love: Queen's choice</figcaption>
+		<video class = "video" 
+			autoplay="false" 
+			id="pvplayer" 
+			preload="none"
+			src="videos/endofabyss.MP4" 
+            poster="pic/ly/video_pv.PNG">
+            Your browser does not support HTML5 video.
+		</video>
+	</figure> 
+    <div class = "video_options">
+		<button id = "play">Play</button>
+		<button  id = "pause">Pause</button>
+		<button  id = "slower">1/2x Speed</button>
+		<button  id = "faster">2x speed</button>
+        <button  id="normal">Normal speed</button>
+		<button  id = "skipahead">Skip 2s</button>
+        
+        <button id="mute">Mute</button><br>
+	</div>
+    <div class="volume_adjust">
+        <label for="volumerange"><b>Volume adjust:</b></label> 
+        0<input type="range" class="form-range" min="0" max="100" step="10" id="volumerange">100%<br>
+    </div>
+    
+</main>
+<script src="js/video.js"></script>
+</body> 
+</html>
